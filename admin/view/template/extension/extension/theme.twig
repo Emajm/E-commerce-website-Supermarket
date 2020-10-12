@@ -1,0 +1,71 @@
+  <legend>Les Thémes Graphiques sur OpenCart France™</legend>
+  <div class="container-fluid">
+      <div class="row">
+
+<div class="col-lg-6 col-md-12 col-sm-12">
+  <div class="panel panel-default">
+    <div>
+      <h3 class="panel-title">
+      <div style="margin-top: 15px">
+      <center>
+      <img width="300" src="view/image/logo.png" alt="Logo Opencart France" title="">
+
+      </center></div>
+       <div style="margin-top: 15px;margin-bottom:20px;"><center>  
+       <a href="http://opencart-france.eu/index.php?route=extension/extension&path=1" target="_blank">
+       Trouvez votre future thème graphique<br>ICI</a>
+      
+       </center></div></div>
+</div>
+
+<fieldset>
+  <legend>{{ heading_title }}</legend>
+  {% if error_warning %}
+  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  {% if success %}
+  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <td class="text-left">{{ column_name }}</td>
+          <td class="text-left">{{ column_status }}</td>
+          <td class="text-right">{{ column_action }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% if extensions %}
+        {% for extension in extensions %}
+        <tr>
+          <td class="text-left" colspan="2"><b>{{ extension.name }}</b></td>
+          <td class="text-right">{% if not extension.installed %}
+            <a href="{{ extension.install }}" data-toggle="tooltip" title="{{ button_install }}" class="btn btn-success"><i class="fa fa-plus-circle"></i></a>
+            {% else %}
+            <a href="{{ extension.uninstall }}" data-toggle="tooltip" title="{{ button_uninstall }}" class="btn btn-danger"><i class="fa fa-minus-circle"></i></a>
+            {% endif %}</td>
+        </tr>
+        {% if extension.installed %}
+        {% for store in extension.store %}
+        <tr>
+          <td class="text-left">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{{ store.name }}</td>
+          <td class="text-left">{{ store.status }}</td>
+          <td class="text-right"><a href="{{ store.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td class="text-center" colspan="3">{{ text_no_results }}</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</fieldset>

@@ -1,0 +1,80 @@
+  <legend>{{ french_solution }}</legend>
+  <div class="container-fluid">
+      <div class="row">
+
+<div class="col-lg-6 col-md-12 col-sm-12">
+  <div class="panel panel-default">
+    <div>
+      <h3 class="panel-title">
+      <div style="margin-top: 15px">
+      <center>
+      <img style="margin-right: 20%;" width="135" src="view/image/Boxtal_340x72.jpg" alt="Monetico Logo" title="">
+      <img style="margin-left: 0px;margin-right: 0px;" width="90" src="view/image/dpd_logo.png" alt="Atos Logo" title="">
+      <img style="margin-left:21%;margin-right:3%;" width="100" src="view/image/gls-logo.png" alt="PayBox Logo" title="">
+      </center></div>
+       <div style="margin-top: 15px;margin-bottom:20px;"><center>  
+       <a href="http://www.opencart-france.eu/index.php?route=extension/extension/link&id=1" target="_blank">
+       <img width="120" src="view/image/PayPal-PayNow.png" alt="Monetico Paypal" title="{{ link_french_market }}"></a>
+       <b style="margin-right: 18%;"" >&nbsp;</b>      
+       <a href="http://www.opencart-france.eu/index.php?route=extension/extension/link&id=2" target="_blank">
+       <img width="120" src="view/image/PayPal-PayNow.png" alt="atos paypal" title="{{ link_french_market }}"></a>     
+       <b style="margin-left: 18%;"" >&nbsp;</b>
+       <a href="http://www.opencart-france.eu/index.php?route=extension/extension/link&id=3" target="_blank">
+       <img width="120" src="view/image/PayPal-PayNow.png" alt="paypal paybox" title="{{ link_french_market }}"></a>
+     
+       </center></div></div>
+</div>
+
+<fieldset>
+  <legend>{{ heading_title }}</legend>
+  {% if error_warning %}
+  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  {% if success %}
+  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <td class="text-left">{{ column_name }}</td>
+          <td class="text-left">{{ column_status }}</td>
+          <td class="text-right">{{ column_sort_order }}</td>
+          <td class="text-right">{{ column_action }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% if extensions %}
+        {% for extension in extensions %}
+        <tr>
+          <td class="text-left">{{ extension.name }}</td>
+          <td class="text-left">{{ extension.status }}</td>
+          <td class="text-right">{{ extension.sort_order }}</td>
+          <td class="text-right">{% if extension.installed %}
+            <a href="{{ extension.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+            {% else %}
+            <button type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-pencil"></i></button>
+            {% endif %}
+            {% if not extension.installed %}
+            <a href="{{ extension.install }}" data-toggle="tooltip" title="{{ button_install }}" class="btn btn-success"><i class="fa fa-plus-circle"></i></a>
+            {% else %}
+            <a href="{{ extension.uninstall }}" data-toggle="tooltip" title="{{ button_uninstall }}" class="btn btn-danger"><i class="fa fa-minus-circle"></i></a>
+            {% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td class="text-center" colspan="4">{{ text_no_results }}</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</fieldset>
+</div>
+</div>
+</div>

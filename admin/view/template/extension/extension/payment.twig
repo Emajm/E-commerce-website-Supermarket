@@ -1,0 +1,176 @@
+<fieldset>
+
+  {% if error_warning %}
+  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  {% if success %}
+  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+
+  <legend>{{ french_solution }}</legend>
+  <div class="container-fluid">
+      <div class="row">
+
+<div class="col-lg-6 col-md-12 col-sm-12">
+  <div class="panel panel-default">
+    <div>
+      <h3 class="panel-title"><center>
+      <img style="margin-right: 20%;" width="135" src="view/image/Monetico-f.gif" alt="Monetico Logo" title="">
+      <img style="margin-left: 0px;margin-right: 0px;" width="90" src="view/image/atos-w.png" alt="Atos Logo" title="">
+      <img style="margin-left:21%;margin-right:3%;" width="100" src="view/image/pbx_e-trans.jpg" alt="PayBox Logo" title="">
+      </center></div>
+       <div style="margin-top:15px;margin-bottom:20px;"><center>  
+       <a style="margin-left:0px;" href="http://www.opencart-france.eu/index.php?route=extension/extension/link&id=21" target="_blank">
+       <img style="margin-left:0px;" width="45" src="view/image/paypal_check-out.jpg" alt="Monetico Paypal" title="{{ link_french_market }}"></a>
+       <a style="margin-left:15px;" href="http://www.hosteco.fr/Extension-Monetico-Opencart-Gateway/module-de-paiement-monetico-cm-cic-opencart-203.html" target="_blank">
+       <img width="105" src="view/image/CB_Visa_Master.jpg" alt="Monetico cb" title="{{ link_french_editor }}"></a>
+
+       <a style="margin-left:12%;" href="http://www.opencart-france.eu/index.php?route=extension/extension/link&id=20" target="_blank">
+       <img style="margin-left:0px;" width="45" src="view/image/paypal_check-out.jpg" alt="atos paypal" title="{{ link_french_market }}"></a>     
+       <a style="margin-left:15px;margin-right: 12%;" href="http://www.hosteco.fr/Extension-Atos-Sips-Worldline-Opencart-Gateway/module-de-paiement-atos-sips-opencart-200.html" target="_blank">
+       <img width="105" src="view/image/CB_Visa_Master.jpg" alt="atos cb" title="{{ link_french_editor }}"></a>
+       
+       <a style="margin-right:0px;" href="http://www.opencart-france.eu/index.php?route=extension/extension/link&id=22" target="_blank">
+       <img style="margin-left:0px;" width="45" src="view/image/paypal_check-out.jpg" alt="paypal paybox" title="{{ link_french_market }}"></a>
+       <a style="margin-left:15px;" href="http://www.hosteco.fr/Extension-PayBox-Opencart-Gateway/module-de-paiement-paybox-opencart-212.html" target="_blank">
+       <img width="105" src="view/image/CB_Visa_Master.jpg" alt="Paybox cb" title="{{ link_french_editor }}"></a>
+
+       </center></div>
+      <div style="text-align: center;"><h4>{{ free_french_solution }}</h4></div>
+    <div style="margin-top:15px"><center>      
+    <a href="https://sogecommerce.societegenerale.eu/doc/fr-FR/" target="_blank">
+      <img width="135" src="view/image/sogecommerce.jpg" alt="sogecommerce Logo" title="{{ text_free_for }} la Société Générale">
+      </a>
+       <b style="margin-left:12%;" >&nbsp;</b>      
+      <a href="https://payzen.eu/tarif-payzen/" target="_blank">      
+      <img width="135" src="view/image/payzen.png" alt="PayZen Logo" title="{{ text_free_all_bank }}">
+      </a>
+      <b style="margin-right:12%;" >&nbsp;</b>      
+      <a href="https://systempay.cyberpluspaiement.com/html/" target="_blank"> 
+      <img width="135" src="view/image/systempay.png" alt="systempay Logo" title="{{ text_free_for }} les banques populaires et la caisse d'épargne">
+      </center>
+    </div>
+    <div style="margin-top: 15px"><center>      
+      
+       <a href="https://www.klikandpay.com/cgi-bin/inscription_new.cgi" target="_blank"> 
+       <img width="135" src="view/image/klikandpay.png" alt="klikandpay Logo" title="{{ text_free_vad }}">
+       </a>
+       <b style="margin-left: 15%;"" >&nbsp;</b>
+       <b href="https://lyra.com/fr/solution-paiement-ecommerce/" target="_blank"> 
+      <img width="90" src="view/image/lyra.png" alt="Lyra Logo" title="{{ text_free_vad }}">
+      </b>
+      <b style="margin-right: 15%;"" >&nbsp;</b>
+       <a href="https://www.payplug.com/inscription?sponsor=106&origin=OpenCartConfig" target="_blank"> 
+      <img width="135" src="view/image/PayPlug.png" alt="PayPlug Logo" title="{{ text_free_vad }}">
+      </a>
+      </center>
+    </div>    
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <p><i>Distribution provisoire v3.0.2.0(FFF),  si certaines extentions gratuites ne figurent pas ci-dessous, elles le seront prochainement</i></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>  
+
+
+
+      </div>
+  </div>  
+<!--  
+  <legend>{{ text_recommended }}</legend>
+  
+<div class="col-lg-6 col-md-12 col-sm-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><img class="pull-right" width="135" src="view/image/payment/payzen.png" alt="PayZen Logo"></h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <p>
+          Offre à vos acheteurs une expérience de paiement simplifiée sur plusieurs appareils qui les maintient localement sur votre site Web tout au long du processus d'autorisation de paiement
+          {{ text_preferred_main }}--> <!--{{ text_learn_more }}</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9">
+          <ul>
+            <li>{{ text_preferred_li_1 }}</li>
+            <li>{{ text_preferred_li_2 }}</li>
+            <li>{{ text_preferred_li_3 }}</li>
+            <li>{{ text_preferred_li_4 }}</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+         
+          {% if connect_link is not empty %}
+              <p><a href="{{ connect_link }}" data-toggle="tooltip" title="" class="btn btn-primary pull-right" target="_blank" data-original-title="{{ text_connect_paypal }}">{{ text_connect_paypal }}</a></p>
+          {% endif %}
+          {% if module_link is not empty %}
+              <p><a href="{{ module_link }}" data-toggle="tooltip" title="" class="btn btn-primary pull-right" data-original-title="{{ text_edit }}"><i class="fa fa-pencil"></i></a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+  
+  
+  
+  <div class="container-fluid">
+    {% if promoted_solution_1 is not empty and promoted_solution_2 is not empty %}
+      <div class="row">
+        {{ promoted_solution_1 }}
+      </div>
+    {% endif %}
+  </div>
+-->  
+  <legend>{{ heading_title }}</legend>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <td class="text-left">{{ column_name }}</td>
+          <td></td>
+          <td class="text-left">{{ column_status }}</td>
+          <td class="text-right">{{ column_sort_order }}</td>
+          <td class="text-right">{{ column_action }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% if extensions %}
+        {% for extension in extensions %}
+        <tr>
+          <td class="text-left">{{ extension.name }}</td>
+          <td class="text-center">{{ extension.link }}</td>
+          <td class="text-left">{{ extension.status }}</td>
+          <td class="text-right">{{ extension.sort_order }}</td>
+          <td class="text-right">{% if extension.installed %}
+            <a href="{{ extension.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+            {% else %}
+            <button type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-pencil"></i></button>
+            {% endif %}
+            {% if not extension.installed %}
+            <a href="{{ extension.install }}" data-toggle="tooltip" title="{{ button_install }}" class="btn btn-success"><i class="fa fa-plus-circle"></i></a>
+            {% else %}
+            <a href="{{ extension.uninstall }}" data-toggle="tooltip" title="{{ button_uninstall }}" class="btn btn-danger"><i class="fa fa-minus-circle"></i></a>
+            {% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td class="text-center" colspan="5">{{ text_no_results }}</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</fieldset>
